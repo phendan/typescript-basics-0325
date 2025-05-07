@@ -1,15 +1,13 @@
-import ky from 'ky';
+// import ky from 'ky';
 
 const html = String.raw;
 
 try {
-    const response = await ky.get('/posts.json').json();
-
-    console.log(validatePosts(response));
-
-    if (validatePosts(response)) {
-        renderPosts(response);
-    }
+    // const response = await ky.get('/posts.json').json();
+    // console.log(validatePosts(response));
+    // if (validatePosts(response)) {
+    //     renderPosts(response);
+    // }
 } catch (error) {
     console.error(error);
 }
@@ -60,14 +58,14 @@ function validateComments(data: unknown): data is Comment[] {
     return true;
 }
 
-type Post = {
+export type Post = {
     id: number;
     title: string;
     body: string;
     comments?: Comment[];
 };
 
-type Comment = {
+export type Comment = {
     id: number;
     message: string;
 };

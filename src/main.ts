@@ -1,10 +1,13 @@
 import './01-basic-types.ts';
 import './03-type-inference.ts';
+import './05-generics.ts';
 
 import './style.css';
 import typescriptLogo from './typescript.svg';
 import viteLogo from '/vite.svg';
 import { setupCounter } from './counter.ts';
+
+const element = document.querySelector<HTMLOutputElement>('.error-message');
 
 // document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 //   <div>
