@@ -33,7 +33,7 @@ const getFullName = (firstName: string, lastName: string, separator = ' ') => {
 
 const fullName = getFullName('Philip', 'Braunen');
 
-console.log(fullName);
+// console.log(fullName);
 
 type User = {
     username: string;
